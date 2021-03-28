@@ -9,7 +9,7 @@ body {
     text-align: center;
     padding: 30px;
     font-family: 'Ubuntu', cursive;
-    font-size: 40px;
+    font-size: 45px;
     margin: 0;
 }
 
@@ -85,7 +85,7 @@ div input {
     border-radius: 10px;
     border: none;
     background-color: rgba(236, 240, 241, 0.9);
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 input:focus {
