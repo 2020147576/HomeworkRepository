@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+body {
+    margin: 0
+}
+
+#title {
+    text-align: center;
+    padding: 30px;
+    font-family: 'Ubuntu', cursive;
+    font-size: 40px;
+    margin: 0;
+}
+
+#current {
+    border-bottom: 3px solid #2ecc71;
+}
+
+.nav {
+    display: inline-block;
+    margin: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+hr {
+    margin: 0
+}
+
+header {
+    margin: 0;
+}
+
+form {
+    margin: 20px;
+}
+
+div input {
+    margin: 5px 0 15px;
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(236, 240, 241, 0.9);
+    padding: 5px;
+}
+
+input:focus {
+    outline:0
+}
+
+.require-mark {
+    color: red;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+    border-right: 3px solid gray;
+    border-bottom: 3px solid gray;
+    transition: border 0.5s;
+}
+
+.btn:hover {
+    border: none
+}
+
+#signup, #login {
+    background-color: #2ecc71;
+}
+
+#cancel {
+    background-color: #e74c3c;
+}
