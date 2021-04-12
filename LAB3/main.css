@@ -23,7 +23,8 @@ body {
 
 .header-animation {
     position: relative;
-    animation: move 0.6s alternate;
+    animation-name: move;
+    animation-duration: 2s;
 }
 
 #title {
