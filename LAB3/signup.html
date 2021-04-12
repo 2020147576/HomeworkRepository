@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>인프마켓</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1 id="title"><a href="./index.html">인프마켓</a></h1>
+        <hr>
+        <div class="nav"><a href="./index.html">홈</a></div>
+        <div class="nav"><a href="./signup.html" id="current">회원가입</a></div>
+        <div class="nav"><a href="./login.html">로그인</a></div>
+        <hr>
+    </header>
+    <section>
+        <form action="">
+        <h3>회원가입</h3>
+        <div>
+            <span class="require-mark">*</span>
+            <label for="name">이름</label>
+            <br>
+            <input type="text" autofocus required> 
+        </div>
+        
+
+        <div>
+            <label for="birth">생일</label>
+            <br>
+            <input type="date">
+        </div>
+
+        <div>
+            <label for="grade">학년</label>
+            <br>
+            <input type="number" min="1" max="4" value="2">
+        </div>
+        
+        <div>
+            <label for="phoneNumber">전화번호</label>
+            <br>
+            <input type="tel" placeholder="ex) 010-0000-0000" 
+            pattern="\d{3}-\d{4}-\d{4}">
+        </div>
+        
+        <div>
+            <span class="require-mark">*</span>
+            <label for="email">이메일</label>
+            <br>
+            <input type="email" autocomplete="on" name="email" required placeholder="이메일을 입력하세요">
+        </div>
+        
+        <div>
+            <span class="require-mark">*</span>
+            <label for="password">비밀번호</label>
+            <br>    
+            <input type="password" required placeholder="비밀번호를 입력하세요">
+        </div>
+
+        <div>
+            <span class="require-mark">*</span>
+            <label for="passward">비밀번호 확인</label>
+            <br>
+            <input type="password" required placeholder="비밀번호를 다시 입력하세요">
+        </div>
+
+            <input type="submit" id="signup" class="btn" value="회원가입">
+            <input type="button" id='cancel' class="btn" value="취소">
+        </form>
+    </section>
+    
+</body>
+</html>
