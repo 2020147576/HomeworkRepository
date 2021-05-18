@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>인프마켓</title>
+    <link rel="stylesheet" href="./main.css" type="text/css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+</head>
+<body class="main">
+    <header>
+        <div class="header-text">
+            <h1 id="title" class="header-animation">인프마켓</h1>
+        </div>
+        <hr>
+        <div class="nav"><a href="./index.html" id="current">홈</a></div>
+        <div class="nav"><a href="./signup.html">회원가입</a></div>
+        <div class="nav"><a href="./login.html">로그인</a></div>
+        <hr>
+    </header>
+
+    <section>
+        <h3>상품</h3>
+        <div class="item-header">
+            <div class="item-category">
+                <label for="category">카테고리: </label>
+                <select name="category" onchange="onChangeHandler(this.value)">
+                    <option value="전체" selected>전체</option>
+                    <option value="파이썬">파이썬</option>
+                    <option value="C">C</option>
+                    <option value="자바">자바</option>
+                    <option value="자바스크립트">자바스크립트</option>
+                    <option value="웹개발">웹개발</option>
+                    <option value="앱개발">앱개발</option>
+                    <option value="알고리즘">알고리즘</option>
+                    <option value="데이터분석">데이터분석</option>
+                    <option value="머신러닝">머신러닝</option>
+                </select>
+            </div>
+            <div class="item-search">
+                <label for="search">검색: </label>
+                <input type="text" id="search"/>
+                <button class="search-btn" onclick="search(event)"><i class="fas fa-search"></i></button>
+                <button class="search-btn" onclick="refresh(event)"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        <div class="item-container">
+        </div>
+    </section>
+
+    <footer></footer>
+
+</body>
+
+<script>
+    let cur = 12;
+
+    const addItem = (item) => {
+        const itemContainer = document.querySelector('.item-container');
+
+        const itemNode = document.createElement('div');
+        itemNode.classList.add('item');
+
+        const description = document.createElement('div');
+        description.classList.add('desc');
+
+        const title = document.createElement('p');
+        title.textContent = item.title;
+        description.appendChild(title);
+
+        const price = document.createElement('p');
+        price.textContent = item.price;
+        description.appendChild(price);
+        
+        const img = document.createElement('img');
+        img.src = item.img;
+        itemNode.appendChild(img);
+        itemNode.appendChild(description);
+
+        addClickEvent(itemNode);
+
+        itemContainer.appendChild(itemNode);
+    }
+
+    const fetchItems = () => {
+        const category = document.querySelector('select').value;
+        return fetch('./product.json')
+        .then(res => res.json())
+        .then(items => Object.values(items))
+        .then(items => filterItem(items, category))
+    }
+
+    const removeItems = () => {
+        const itemContainer = document.querySelector('.item-container');
+        itemContainer.innerHTML = "";
+    }
+
+    const addClickEvent = (node) => {
+        node.addEventListener('click', () => {
+            if(node.classList.toggle('selected')) {
+                node.querySelector('.desc').style.display = 'flex';
+            }
+            else {
+                node.querySelector('.desc').style.display = 'none';
+            }
+        })
+    }
+
+    const onChangeHandler = (category) => {
+        removeItems();
+        fetchItems()
+        .then(items => {
+            const len = items.length;
+            items.slice(0, 12 < len ? 12 : len).forEach(item => addItem(item));
+        })
+    }
+
+    const filterItem = (items, category) => {
+        if (category === "전체") {
+            return items
+        }
+        return items.filter(item => item.category.includes(category));
+    }
+
+    window.onscroll = () => {
+        const category = document.querySelector('select').value;
+        const search = document.querySelector('#search').value;
+        if (window.innerHeight + window.scrollY + 40 >= document.body.offsetHeight) {
+            infiniteScroll(category, search);
+        }
+    }
+
+    const infiniteScroll = (category, search) => {
+        fetchItems()
+        .then(items => items.filter(item => item.title.includes(search)))
+        .then(items => {
+            const len = items.length;
+            if (len < cur) return;
+            items.slice(cur, cur + 12 < len ? cur + 12 : len ).forEach(item => {
+                addItem(item);
+            });
+            cur += 12;
+        })
+    }
+
+    const fetchForSearch = (input) => {
+        return fetchItems()
+            .then(items => {
+                let matchedItems = items.filter(item => item.title.includes(input))
+                if (input.length === 0) {matchedItems = items}
+                const len = matchedItems.length;
+                if(len === 0) {
+                    const itemContainer = document.querySelector('.item-container');
+                    const noItem = document.createElement('div');
+                    noItem.innerText = "검색 결과가 없습니다."
+                    noItem.classList.add('no-item');
+                    itemContainer.appendChild(noItem);
+                }
+                matchedItems
+                .slice(0, 12 < len ? 12 : len)
+                .forEach(item => addItem(item))
+            })
+    }
+
+    const search = (e) => {
+        removeItems();
+        cur = 12;
+        const input = e.currentTarget.parentNode.querySelector('input').value;
+        fetchForSearch(input);
+        
+    }
+
+    const refresh = () => {
+        removeItems();
+        cur = 12;
+        document.querySelector('#search').value = "";
+        fetchForSearch("");
+    }
+
+    removeItems();
+    fetchItems()
+    .then(items => {
+        items.slice(0, 12).forEach(item => {
+            addItem(item);
+        });
+    })
+
+    document.cookie = "SameSite=None secure";
+</script>
+
+
+</html>
