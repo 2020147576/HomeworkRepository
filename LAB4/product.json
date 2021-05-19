@@ -244,6 +244,41 @@
 		"price": "28,800원",
         "category": ["웹개발", "앱개발"]
 	},
+    "35": {
+        "id": 35,
+        "title": "혼자 공부하는 C 언어",
+        "img": "https://simage.kyobobook.co.kr/images/book/large/868/l9791162241868.jpg",
+        "price": "21,600원",
+        "category": ["C"]
+    },
+    "36": {
+        "id": 36,
+        "title": "C언어 코딩 도장",
+        "img": "https://simage.kyobobook.co.kr/images/book/large/282/l9791187345282.jpg",
+        "price": "22,500원",
+        "category": ["C"]
+    },
+    "37": {
+        "id": 37,
+        "title": "윤성우의 열혈 C++ 프로그래밍",
+        "img": "https://simage.kyobobook.co.kr/images/book/large/043/l9788996094043.jpg",
+        "price": "24,300원",
+        "category": ["C"]
+    },
+    "38": {
+        "id": 38,
+        "title": " 코딩 테스트를 위한 자료 구조와 알고리즘 with C++",
+        "img": "https://simage.kyobobook.co.kr/images/book/large/794/l9791165213794.jpg",
+        "price": "28,800원",
+        "category": ["C"]
+    },
+    "39": {
+        "id": 39,
+        "title": " 이것이 C++이다",
+        "img": "https://simage.kyobobook.co.kr/images/book/large/465/l9788968482465.jpg",
+        "price": "22,500원",
+        "category": ["C"]
+    },
 	"40": {
 		"id": 40,
 		"title": "Do it! 쉽게 배우는 R 텍스트 마이닝",
@@ -277,6 +312,27 @@
 		"title": "Do it! 첫 코딩 with 자바",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/185/l9791163031185.jpg",
 		"price": "12,600원",
+        "category": ["자바"]
+	},
+    "45": {
+		"id": 45,
+		"title": " 혼자 공부하는 자바",
+		"img": "https://simage.kyobobook.co.kr/images/book/large/875/l9791162241875.jpg",
+		"price": "21,600원",
+        "category": ["자바"]
+	},
+    "46": {
+		"id": 46,
+		"title": " 아파치 카프카 애플리케이션 프로그래밍 with 자바",
+		"img": "https://simage.kyobobook.co.kr/images/book/large/548/l9791165920548.jpg",
+		"price": "28,800원",
+        "category": ["자바"]
+	},
+    "47": {
+		"id": 47,
+		"title": " 자바 웹 프로그래밍 Next Step",
+		"img": "https://simage.kyobobook.co.kr/images/book/large/240/l9788997924240.jpg",
+		"price": "27,000원",
         "category": ["자바"]
 	},
 	"48": {
