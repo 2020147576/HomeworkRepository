@@ -55,7 +55,7 @@
 </body>
 
 <script>
-    let cur = 12;
+    let cur = 9;
 
     const addItem = (item) => {
         const itemContainer = document.querySelector('.item-container');
@@ -113,7 +113,7 @@
         fetchItems()
         .then(items => {
             const len = items.length;
-            items.slice(0, 12 < len ? 12 : len).forEach(item => addItem(item));
+            items.slice(0, 9 < len ? 9 : len).forEach(item => addItem(item));
         })
     }
 
@@ -125,14 +125,13 @@
     }
 
     window.onscroll = () => {
-        const category = document.querySelector('select').value;
         const search = document.querySelector('#search').value;
         if (window.innerHeight + window.scrollY + 40 >= document.body.offsetHeight) {
-            infiniteScroll(category, search);
+            infiniteScroll(search);
         }
     }
 
-    const infiniteScroll = (category, search) => {
+    const infiniteScroll = (search) => {
         fetchItems()
         .then(items => items.filter(item => item.title.includes(search)))
         .then(items => {
@@ -141,7 +140,7 @@
             items.slice(cur, cur + 12 < len ? cur + 12 : len ).forEach(item => {
                 addItem(item);
             });
-            cur += 12;
+            cur += 9;
         })
     }
 
@@ -159,14 +158,14 @@
                     itemContainer.appendChild(noItem);
                 }
                 matchedItems
-                .slice(0, 12 < len ? 12 : len)
+                .slice(0, 9 < len ? 9 : len)
                 .forEach(item => addItem(item))
             })
     }
 
     const search = (e) => {
         removeItems();
-        cur = 12;
+        cur = 9;
         const input = e.currentTarget.parentNode.querySelector('input').value;
         fetchForSearch(input);
         
@@ -174,7 +173,7 @@
 
     const refresh = () => {
         removeItems();
-        cur = 12;
+        cur = 9;
         document.querySelector('#search').value = "";
         fetchForSearch("");
     }
@@ -182,7 +181,7 @@
     removeItems();
     fetchItems()
     .then(items => {
-        items.slice(0, 12).forEach(item => {
+        items.slice(0, 9).forEach(item => {
             addItem(item);
         });
     })
