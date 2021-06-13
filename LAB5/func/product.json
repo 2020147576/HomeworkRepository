@@ -32,7 +32,7 @@
 		"title": " Do it! 자료구조와 함께 배우는 알고리즘 입문: 파이썬 편",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/727/l9791163031727.jpg",
 		"price": "19,800원",
-        "category": ["파이썬"]
+        "category": ["파이썬", "알고리즘"]
 	},
 	"5": {
 		"id": 5,
@@ -53,7 +53,7 @@
 		"title": " Do it! 장고+부트스트랩 파이썬 웹 개발의 정석",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/069/l9791163032069.jpg",
 		"price": "28,800원",
-        "category": ["파이썬"]
+        "category": ["파이썬", "웹개발"]
 	},
 	"8": {
 		"id": 8,
@@ -67,7 +67,7 @@
 		"title": " Do it! 자료구조와 함께 배우는 알고리즘 입문: 자바 편",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/072/l9791163030072.jpg",
 		"price": "19,800원",
-        "category": ["자바"]
+        "category": ["자바", "알고리즘"]
 	},
 	"10": {
 		"id": 10,
@@ -88,7 +88,7 @@
 		"title": " Do it! 플러터 앱 프로그래밍",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/311/l9791163032311.jpg",
 		"price": "27,000원",
-        "category": ["파이썬"]
+        "category": ["앱개발", "파이썬"]
 	},
 	"13": {
 		"id": 13,
@@ -102,21 +102,21 @@
 		"title": " Do it! 타입스크립트 프로그래밍",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/482/l9791163031482.jpg",
 		"price": "22,500원",
-        "category": ["자바스크립트"]
+        "category": ["자바스크립트", "타입스크립트"]
 	},
 	"15": {
 		"id": 15,
 		"title": " Do it! 자료구조와 함께 배우는 알고리즘 입문: C 언어 편",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/130/l9791188612130.jpg",
 		"price": "19,800원",
-        "category": ["C"]
+        "category": ["C", "알고리즘"]
 	},
 	"16": {
 		"id": 16,
 		"title": " Do it! Vue.js 입문",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/789/l9791188612789.jpg",
 		"price": "13,500원",
-        "category": ["웹개발"]
+        "category": ["웹개발", "자바스크립트"]
 	},
 	"17": {
 		"id": 17,
@@ -130,7 +130,7 @@
 		"title": " Do it! 데이터 분석을 위한 판다스 입문",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/287/l9791163030287.jpg",
 		"price": "15,300원",
-        "category": ["파이썬"]
+        "category": ["파이썬", "데이터분석"]
 	},
     "19": {
         "id": 19,
@@ -144,7 +144,7 @@
 		"title": " Do it! 점프 투 장고",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/106/l9791163032106.jpg",
 		"price": "17,820원",
-        "category": ["웹개발"]
+        "category": ["웹개발", "파이썬"]
 	},
 	"21": {
 		"id": 21,
@@ -165,7 +165,7 @@
 		"title": " Do it! 웹 프로그래밍을 위한 자바스크립트 기본 편",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/645/l9791163030645.jpg",
 		"price": "16,920원",
-        "category": ["웹개발"]
+        "category": ["웹개발", "자바스크립트"]
 	},
 	"24": {
 		"id": 24,
@@ -193,7 +193,7 @@
 		"title": " Do it! 리액트 프로그래밍 정석",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/451/l9791163031451.jpg",
 		"price": "32,400원",
-        "category": ["웹개발"]
+        "category": ["웹개발", "자바스크립트"]
 	},
 	"28": {
 		"id": 28,
@@ -207,7 +207,7 @@
         "title": "파이썬 머신러닝 완벽 가이드",
         "img": "https://simage.kyobobook.co.kr/images/book/large/928/l9791158391928.jpg",
         "price": "34,200원",
-        "category": ["파이썬"]
+        "category": ["파이썬", "머신러닝"]
     },
 	"30": {
 		"id": 30,
@@ -242,7 +242,7 @@
 		"title": " Do it! 프로그레시브 웹앱 만들기",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/765/l9791163031765.jpg",
 		"price": "28,800원",
-        "category": ["앱개발"]
+        "category": ["웹개발", "앱개발"]
 	},
     "35": {
         "id": 35,
@@ -375,14 +375,14 @@
 		"title": " Do it! Node.js 프로그래밍",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/802/l9791187370802.jpg",
 		"price": "31,500원",
-        "category": ["자바스크립트"]
+        "category": ["웹개발", "자바스크립트"]
 	},
 	"56": {
 		"id": 56,
 		"title": " Do it! 입문자도 쉽게 배우는 웹앱&하이브리드앱",
 		"img": "https://simage.kyobobook.co.kr/images/book/large/793/l9788997390793.jpg",
 		"price": "28,800원",
-        "category": ["앱개발"]
+        "category": ["웹개발", "앱개발"]
 	},
 	"57": {
 		"id": 57,

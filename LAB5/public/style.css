@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+
+body {
+    width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@keyframes move{
+    0% {
+        left: 1020px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.header-text {
+    position: relative;
+}
+
+.header-animation {
+    position: relative;
+    animation-name: move;
+    animation-duration: 2s;
+}
+
+#title {
+    display: inline-block;
+    text-align: left;
+    padding: 30px 0px;
+    font-family: 'Sunflower', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin: 0;
+}
+
+#title a {
+    text-decoration: none;
+    color: black;
+}
+
+#current {
+    border-bottom: 3px solid #2ecc71;
+}
+
+.nav {
+    display: inline-block;
+    margin: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+form h3 {
+    border-bottom: 1px solid gray;
+    width: 300px;
+}
+
+header {
+    width: 1020px;
+    margin: 0;
+    position: relative
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+}
+
+section h3 {
+    border-bottom: 1px solid black;
+    margin: 20px;
+}
+
+footer {
+    margin: 20px;
+}
+
+.item-header {
+    margin: 0 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+}
+
+.item-category {
+    display: inline-block;
+}
+
+.item-search {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+}
+
+.search-btn {
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
+select {
+    width: 150px;
+    height: 30px;
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.item .desc {
+    display: none;
+    position:absolute;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc p {
+    z-index: 4;
+    color: white;
+    opacity: 1;
+    font-size: large;
+    text-align: center;
+}
+
+.no-item {
+    height: 100px;
+    padding-top: 100px;
+}
+
+.item img {
+    height: 200px;
+    transition: all 2s;
+}
+
+.item img:hover {
+    height: 400px;
+}
+
+.item-description {
+    display: flex;
+    margin: 20px;
+}
+
+.image {
+    display: flex;
+    width: 40%;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    margin:  0 50px 10px;
+    width: 60%;
+}
+.title {
+    width: 100%;
+    font-size: 2rem;
+    margin: 10px 0 100px;
+    font-weight: 800;
+}
+
+.price {
+    font-size: 1.5rem;
+    
+}
+
+.review-container {
+    min-height: 300px;
+}
+
+form {
+    min-height: 500px;
+    margin: 20px;
+    padding: 30px 150px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.review-form {
+    min-height: auto;
+    border:none;
+    margin: 20px;
+    padding: 0 0 20px;
+    display: flex;
+    border-radius: 0px;
+    border-bottom: solid 1px #d9d9d9;
+}
+
+.comment {
+    margin: 20px;
+    border-bottom: solid 1px gray;
+}
+
+.comment p {
+    font-size: large;
+}
+
+div input {
+    margin: 5px 0 15px;
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(236, 240, 241, 0.9);
+    padding: 5px 10px;
+    
+}
+
+input:focus {
+    outline:0
+}
+
+.require-mark {
+    color: red;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-right: 3px solid gray;
+    border-bottom: 3px solid gray;
+    transition: border 0.5s;
+}
+
+.btn:hover {
+    border: none
+}
+
+#signup, #login {
+    background-color: #2ecc71;
+}
+
+#cancel {
+    background-color: #e74c3c;
+}

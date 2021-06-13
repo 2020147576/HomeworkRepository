@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>인프마켓</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+
+<body class="main">
+    <header>
+        <div class="header-text">
+            <h1 id="title" class="header-animation">인프마켓</h1>
+        </div>
+        <hr>
+        <div class="nav"><a href="/" id="current">홈</a></div>
+        <div class="nav"><a href="/signup">회원가입</a></div>
+        <div class="nav"><a href="/login">로그인</a></div>
+        <hr>
+    </header>
+
+    <section>
+        <h3>상품</h3>
+        <div class="item-header">
+            <div class="item-category">
+                <label for="category">카테고리: </label>
+                <select name="category" onchange="onChangeHandler(this.value)">
+                    <% for (category of categoryList) { %>
+                        <% if (category === curCategory) {%>
+                        <option selected value=<%=category%>><%=category%></option> 
+                        <% } else {%>
+                            <option value=<%=category%> ><%=category%></option> 
+                        <% } %>
+                    <% } %>
+                </select>
+            </div>
+            <div class="item-search">
+                <label for="search">검색: </label>
+                <input type="text" id="search" autocomplete="off" value="<%= search %>" />
+                <button class="search-btn" onclick="search(event)"><i class="fas fa-search"></i></button>
+                <button class="search-btn" onclick="refresh(event)"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        <div class="item-container">
+            <% for (product of products) { %>
+                <div class="item" onclick="showDesc('<%= product.product_id %>')">
+                    <img src=<%= product.product_image%>>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <footer></footer>
+
+</body>
+
+<script>
+const searchBtn = document.querySelector('.search-btn')
+searchBtn.addEventListener('keydown', search);
+
+function showDesc(id) {
+    location.href = `/product/${id}`;
+}
+
+function search(e) {
+    const input = document.querySelector('#search').value;
+    const category = document.querySelector('select').value; 
+    location.href = encodeURI(`/?category=${category}&search=${input}`); 
+}
+
+function refresh() {
+    location.href = '/';
+}
+
+function onChangeHandler(category) {
+    const input = document.querySelector('#search').value;
+    location.href = encodeURI(`/?category=${category}&search=${input}`);
+}
+
+</script>
+
+</html>

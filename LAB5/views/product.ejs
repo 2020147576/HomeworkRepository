@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>인프마켓</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+
+<body class="main">
+    <header>
+        <div class="header-text">
+            <h1 id="title" class="header-animation">인프마켓</h1>
+        </div>
+        <hr>
+        <div class="nav"><a href="/" id="current">홈</a></div>
+        <div class="nav"><a href="/signup">회원가입</a></div>
+        <div class="nav"><a href="/login">로그인</a></div>
+        <hr>
+    </header>
+
+    <section>
+        <h3>상품 정보</h3>
+        <div class="item-description">
+            <img class="image" src=<%= product.product_image %>>
+            <div class="description">
+                <p class="title"><%= product.product_title %></p>
+                <p class="price">가격: <%= product.product_price %></p>
+            </div>
+        </div>
+        <h3>리뷰</h3>
+        <div class="review-container">
+            <form class="review-form" action="/product" method="POST">
+                <textarea name="comment" id="" cols="120" rows="4" placeholder="리뷰를 입력하세요"></textarea>
+                <input type="text" name="product_id" hidden value='<%= product.product_id %>' />
+                <button type="submit" style="align-self: center;margin: 0 20px; width: 80px; height: 50px;">작성</button>
+            </form>
+            <% for (comment of comments) { %>
+                <div class="comment">
+                    <p><%= comment %></p>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <footer></footer>
+
+</body>
+
+</html>
